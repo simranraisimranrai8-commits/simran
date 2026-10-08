@@ -1,0 +1,1 @@
+export const ROLES = ['ADMIN', 'JOB_SEEKER', 'EMPLOYER', 'PROVIDER']

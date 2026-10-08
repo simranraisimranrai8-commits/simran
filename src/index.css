@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'DM Sans', system-ui, sans-serif;
+        background-color: #FAF8F4;
+        color: #2d2d3a;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'DM Serif Display', Georgia, serif;
+        letter-spacing: -0.02em;
+    }
+}
+
+@layer components {
+
+    /* Glassmorphism card */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+        background: linear-gradient(135deg, #7C5CBF 0%, #3D9DD8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .gradient-text-warm {
+        background: linear-gradient(135deg, #D95224 0%, #7C5CBF 60%, #1A7FC1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Mesh gradient backgrounds */
+    .mesh-bg {
+        background:
+            radial-gradient(ellipse at 20% 20%, rgba(214, 195, 255, 0.35) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 10%, rgba(168, 210, 240, 0.3) 0%, transparent 45%),
+            radial-gradient(ellipse at 50% 80%, rgba(195, 235, 220, 0.3) 0%, transparent 50%),
+            radial-gradient(ellipse at 90% 80%, rgba(254, 220, 195, 0.25) 0%, transparent 45%),
+            #FAF8F4;
+    }
+
+    .section-alt {
+        background:
+            radial-gradient(ellipse at 10% 50%, rgba(214, 195, 255, 0.2) 0%, transparent 55%),
+            radial-gradient(ellipse at 90% 50%, rgba(168, 210, 240, 0.2) 0%, transparent 55%),
+            #F7F5FF;
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #7C5CBF, #3D9DD8, #2E9E8D);
+        z-index: 9999;
+        transform-origin: left;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #FAF8F4;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #BEA7FF;
+        border-radius: 3px;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .animation-delay-100 {
+        animation-delay: 0.1s;
+    }
+
+    .animation-delay-200 {
+        animation-delay: 0.2s;
+    }
+
+    .animation-delay-300 {
+        animation-delay: 0.3s;
+    }
+
+    .animation-delay-400 {
+        animation-delay: 0.4s;
+    }
+
+    .animation-delay-500 {
+        animation-delay: 0.5s;
+    }
+}

@@ -1,0 +1,8 @@
+export const USER_STATUS = ['Active', 'Pending', 'Suspended']
+export const JOB_STATUS = ['DRAFT', 'ACTIVE', 'PAUSED', 'EXPIRED', 'CLOSED', 'FLAGGED']
+export const APPLICATION_STATUS = ['APPLIED', 'REVIEWING', 'SHORTLISTED', 'INTERVIEW', 'SELECTED', 'REJECTED', 'WITHDRAWN']
+export const ORDER_STATUS = ['REQUESTED', 'ACCEPTED', 'ON_THE_WAY', 'STARTED', 'COMPLETED', 'CANCELLED']
+export const PAYMENT_STATUS = ['PENDING', 'PAID', 'FAILED', 'REFUNDED']
+export const NOTIFICATION_TYPES = ['APPLICATION', 'INTERVIEW', 'PAYMENT', 'SERVICE', 'SYSTEM']
+export const NOTIFICATION_STATUS = ['DRAFT', 'SCHEDULED', 'SENT']
+export const PRICING_CATEGORIES = ['Application Fee', 'Job Posting', 'Credit Packs', 'Service Platform Fee', 'Boost']

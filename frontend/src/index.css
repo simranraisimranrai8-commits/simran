@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: #F7F9FC;
+    --surface-card: #FFFFFF;
+    --ink: #102A43;
+    --ink-muted: #64748B;
+    --line: #E2E8F0;
+  }
+  html.dark {
+    --surface: #0A1930;
+    --surface-card: #0F2545;
+    --ink: #E7EEF7;
+    --ink-muted: #9FB3CC;
+    --line: #1E3A5F;
+    --scrollbar-track: #0A1930;
+    --scrollbar-thumb: #31577F;
+    --scrollbar-thumb-hover: #4A76A5;
+  }
+  :root {
+    --scrollbar-track: #F7F9FC;
+    --scrollbar-thumb: #B8C7D9;
+    --scrollbar-thumb-hover: #8FA7C1;
+  }
+  html { scroll-behavior: smooth; }
+  html, body, * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { border: 2px solid var(--scrollbar-track); border-radius: 999px; background: var(--scrollbar-thumb); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+  body {
+    @apply bg-surface text-ink font-sans antialiased transition-colors duration-200;
+    overflow-x: hidden;
+  }
+  :focus-visible { outline: 2px solid #1557A6; outline-offset: 2px; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand text-white hover:bg-navy; }
+  .btn-green { @apply btn bg-leaf text-white hover:opacity-90; }
+  .btn-outline { @apply btn border border-line bg-card text-ink hover:border-brand hover:text-brand; }
+  .btn-ghost { @apply btn text-muted hover:bg-surface hover:text-ink; }
+  .input { @apply w-full rounded-lg border border-line bg-card px-3 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20; }
+  .label { @apply mb-1.5 block text-sm font-medium text-ink; }
+  .card { @apply rounded-xl border border-line bg-card shadow-card; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
