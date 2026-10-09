@@ -22,8 +22,9 @@ function App() {
 
 
       <BrowserRouter>
-        <Naa />
 
+
+        <Product />
         <Routes>
           {/* <Route path="/University" element={<University />} />
           <Route path="/Courses" element={<Courses />} />
@@ -33,6 +34,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Book" element={<Book />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
 
     </div>
